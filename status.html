@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เช็คสถานะ</title>
+    <link rel="stylesheet" href="styles3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // เมื่อหน้าเว็บโหลดเสร็จแล้ว
+            updateStatus(); // เรียกฟังก์ชันเพื่ออัพเดทสถานะทันทีที่หน้าเว็บโหลดเสร็จ
+
+            // สร้างฟังก์ชันสำหรับอัพเดทสถานะ
+            function updateStatus() {
+                $.ajax({
+                    url: 'status.php',
+                    type: 'GET',
+                    success: function(response) {
+                        $('#status-container').html(response); // นำข้อมูลที่ได้มาแสดงในตัวแปรที่มี ID เป็น status-container
+                    },
+                    error: function() {
+                        alert('มีข้อผิดพลาดในการโหลดข้อมูลสถานะ');
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>เช็คสถานะ</h1>
+        <nav>
+            <ul>
+                <li><a href="report.php">แจ้งปัญหา</a></li>
+                <li><a href="status.html">เช็คสถานะ</a></li>
+                <li><a href="logout.php">ออกจากระบบ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="status">
+            <h2>เช็คสถานะ</h2>
+            <div id="status-container">
+                <!-- ส่วนที่จะแสดงสถานะจากการโหลด -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 บริษัท XYZ. สงวนลิขสิทธิ์</p>
+    </footer>
+</body>
+</html>

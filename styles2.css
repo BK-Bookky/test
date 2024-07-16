@@ -1,0 +1,90 @@
+/* สไตล์สำหรับพื้นหลัง */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/* สไตล์สำหรับหัวข้อ */
+header {
+    background: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* สไตล์สำหรับเมนูการนำทาง */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background: #444;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
+/* สไตล์สำหรับเนื้อหาหลัก */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding-bottom: 100px; /* เพิ่ม padding-bottom เพื่อป้องกันไม่ให้เนื้อหาถูกบัง */
+}
+
+/* สไตล์สำหรับฟอร์ม */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form button {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background: #555;
+}
+
+/* สไตล์สำหรับ footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+}

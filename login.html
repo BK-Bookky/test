@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <h1>เข้าสู่ระบบ</h1>
+        <nav>
+            <ul>
+                <li><a href="login.html">หน้าแรก</a></li>
+                <li><a href="report.php">แจ้งปัญหา</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login">
+            <h2>เข้าสู่ระบบ</h2>
+            <form action="login.php" method="post">
+                <label for="username">ชื่อผู้ใช้:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+
+                <label for="password">รหัสผ่าน:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+
+                <button type="submit">เข้าสู่ระบบ</button>
+            </form>
+            <br>
+            <p>ยังไม่มีบัญชี? <a href="register.html">สมัครสมาชิก</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 บริษัท XYZ. สงวนลิขสิทธิ์.</p>
+    </footer>
+</body>
+</html>
+ 
